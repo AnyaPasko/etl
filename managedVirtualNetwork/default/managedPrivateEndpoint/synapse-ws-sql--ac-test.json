@@ -1,0 +1,10 @@
+{
+	"name": "synapse-ws-sql--ac-test",
+	"properties": {
+		"privateLinkResourceId": "/subscriptions/9a173807-014a-437d-a720-e2f0506e3157/resourceGroups/data-prototyping/providers/Microsoft.Synapse/workspaces/ac-test",
+		"groupId": "sql",
+		"fqdns": [
+			"ac-test.3ab582c6-730b-4d13-b732-35f48f5c9e04.sql.azuresynapse.net"
+		]
+	}
+}

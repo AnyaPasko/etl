@@ -1,0 +1,25 @@
+{
+	"name": "new_data_in_container_trigger",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "Pipeline 1",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/airbytecontainer/blobs/emails/",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/9a173807-014a-437d-a720-e2f0506e3157/resourceGroups/databricks-quickstart/providers/Microsoft.Storage/storageAccounts/anyatesting",
+			"events": [
+				"Microsoft.Storage.BlobCreated",
+				"Microsoft.Storage.BlobDeleted"
+			]
+		}
+	}
+}

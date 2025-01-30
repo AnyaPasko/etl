@@ -1,0 +1,19 @@
+{
+	"name": "adamcsptesting",
+	"properties": {
+		"description": "spark.hadoop.fs.azure.account.auth.type.adamcsptesting.dfs.core.windows.net",
+		"configs": {
+			"spark.hadoop.fs.azure.account.auth.type.adamcsptesting.dfs.core.windows.net": "com.microsoft.azure.synapse.tokenlibrary.LinkedServiceBasedSASProvider",
+			"spark.storage.synapse.adamcsptesting.dfs.core.windows.net.linedServiceName": "ac-test-WorkspaceDefaultStorage",
+			"spark.hadoop.fs.azure.sas.token.provider.type.adamcsptesting.dfs.core.windows.net": "sv=2022-11-02&ss=bfqt&srt=sco&sp=rwdlacupyx&se=2025-01-23T22:20:03Z&st=2025-01-23T14:20:03Z&spr=https&sig=f4zl%2FAr%2FOQ8yUWVTC62RmFi1ajyugRg8bRvo%2Fc8tDfU%3D"
+		},
+		"created": "2025-01-23T14:20:21.902Z",
+		"createdBy": "anna@simplepharma.com",
+		"annotations": [],
+		"configMergeRule": {
+			"artifact.currentOperation.spark.hadoop.fs.azure.account.auth.type.adamcsptesting.dfs.core.windows.net": "replace",
+			"artifact.currentOperation.spark.storage.synapse.adamcsptesting.dfs.core.windows.net.linedServiceName": "replace",
+			"artifact.currentOperation.spark.hadoop.fs.azure.sas.token.provider.type.adamcsptesting.dfs.core.windows.net": "replace"
+		}
+	}
+}
