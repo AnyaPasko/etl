@@ -18,15 +18,16 @@
 				"spark.dynamicAllocation.enabled": "false",
 				"spark.dynamicAllocation.minExecutors": "2",
 				"spark.dynamicAllocation.maxExecutors": "2",
-				"spark.autotune.trackingId": "d45997c8-db9b-4b78-b2a2-4cc15a509d76"
+				"spark.autotune.trackingId": "2783278f-42b8-4763-b699-902843a92fea"
 			}
 		},
 		"metadata": {
 			"saveOutput": true,
-			"synapse_widget": {
-				"version": "0.1"
-			},
 			"enableDebugMode": false,
+			"kernelspec": {
+				"name": "synapse_pyspark",
+				"display_name": "Synapse PySpark"
+			},
 			"language_info": {
 				"name": "python"
 			},
@@ -37,14 +38,13 @@
 				"endpoint": "https://ac-test.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/actestspark",
 				"auth": {
 					"type": "AAD",
-					"authResource": "https://dev.azuresynapse.net",
-					"authHeader": null
+					"authResource": "https://dev.azuresynapse.net"
 				},
 				"sparkVersion": "3.4",
 				"nodeCount": 3,
 				"cores": 4,
 				"memory": 28,
-				"extraHeader": null
+				"automaticScaleJobs": false
 			},
 			"sessionKeepAliveTimeout": 30
 		},
@@ -70,7 +70,7 @@
 					"\r\n",
 					"spark.conf.set('spark.sql.repl.eagerEval.enabled', True)"
 				],
-				"execution_count": 1
+				"execution_count": 3
 			},
 			{
 				"cell_type": "markdown",
@@ -119,7 +119,7 @@
 					"\r\n",
 					"df[['post_id', 'text']]"
 				],
-				"execution_count": 2
+				"execution_count": 4
 			},
 			{
 				"cell_type": "markdown",
@@ -165,7 +165,7 @@
 					"columns_to_include = [\"post_id\", \"text\"]  # Replace with your column names\n",
 					"df = df[columns_to_include]"
 				],
-				"execution_count": 3
+				"execution_count": 5
 			},
 			{
 				"cell_type": "code",
@@ -198,7 +198,7 @@
 					"df.write.option(\"header\", \"true\").option(\"delimiter\", \",\").mode(\"overwrite\").csv(csv_path)\n",
 					"# df.write.option(\"header\", \"true\").option(\"delimiter\", \",\").mode(\"overwrite\").json(json_path)"
 				],
-				"execution_count": 9
+				"execution_count": 6
 			}
 		]
 	}
