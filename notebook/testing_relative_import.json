@@ -1,8 +1,15 @@
 {
-	"name": "Notebook 1",
+	"name": "testing_relative_import",
 	"properties": {
+		"folder": {
+			"name": "anya_testing"
+		},
 		"nbformat": 4,
 		"nbformat_minor": 2,
+		"bigDataPool": {
+			"referenceName": "actestspark",
+			"type": "BigDataPoolReference"
+		},
 		"sessionProperties": {
 			"driverMemory": "28g",
 			"driverCores": 4,
@@ -13,7 +20,7 @@
 				"spark.dynamicAllocation.enabled": "false",
 				"spark.dynamicAllocation.minExecutors": "2",
 				"spark.dynamicAllocation.maxExecutors": "2",
-				"spark.autotune.trackingId": "1431f2d5-86b5-4f50-83e9-ba167c32d6f5"
+				"spark.autotune.trackingId": "c549b4ae-8328-42d3-afbe-414becc632f1"
 			}
 		},
 		"metadata": {
@@ -21,10 +28,25 @@
 			"enableDebugMode": false,
 			"kernelspec": {
 				"name": "synapse_pyspark",
-				"display_name": "python"
+				"display_name": "Synapse PySpark"
 			},
 			"language_info": {
 				"name": "python"
+			},
+			"a365ComputeOptions": {
+				"id": "/subscriptions/9a173807-014a-437d-a720-e2f0506e3157/resourceGroups/data-prototyping/providers/Microsoft.Synapse/workspaces/ac-test/bigDataPools/actestspark",
+				"name": "actestspark",
+				"type": "Spark",
+				"endpoint": "https://ac-test.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/actestspark",
+				"auth": {
+					"type": "AAD",
+					"authResource": "https://dev.azuresynapse.net"
+				},
+				"sparkVersion": "3.4",
+				"nodeCount": 3,
+				"cores": 4,
+				"memory": 28,
+				"automaticScaleJobs": false
 			},
 			"sessionKeepAliveTimeout": 30
 		},
@@ -32,9 +54,9 @@
 			{
 				"cell_type": "code",
 				"source": [
-					""
+					"from .utils.sync_utils import should_update_doc_in_terminus"
 				],
-				"execution_count": null
+				"execution_count": 3
 			}
 		]
 	}
