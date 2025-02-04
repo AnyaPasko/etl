@@ -20,7 +20,7 @@
 				"spark.dynamicAllocation.enabled": "false",
 				"spark.dynamicAllocation.minExecutors": "2",
 				"spark.dynamicAllocation.maxExecutors": "2",
-				"spark.autotune.trackingId": "c549b4ae-8328-42d3-afbe-414becc632f1"
+				"spark.autotune.trackingId": "c0c863da-f187-473d-86ff-900a98b11081"
 			}
 		},
 		"metadata": {
@@ -54,9 +54,9 @@
 			{
 				"cell_type": "code",
 				"source": [
-					"from .utils.sync_utils import should_update_doc_in_terminus"
+					"from utils.sync_utils import should_update_doc_in_terminus"
 				],
-				"execution_count": 3
+				"execution_count": 5
 			}
 		]
 	}
