@@ -1,6 +1,9 @@
 {
 	"name": "prototype_data_processing",
 	"properties": {
+		"folder": {
+			"name": "anya_testing"
+		},
 		"nbformat": 4,
 		"nbformat_minor": 2,
 		"bigDataPool": {
@@ -18,15 +21,16 @@
 				"spark.dynamicAllocation.enabled": "false",
 				"spark.dynamicAllocation.minExecutors": "2",
 				"spark.dynamicAllocation.maxExecutors": "2",
-				"spark.autotune.trackingId": "d45997c8-db9b-4b78-b2a2-4cc15a509d76"
+				"spark.autotune.trackingId": "7690b12a-3234-4fa9-8ad2-63853cc90915"
 			}
 		},
 		"metadata": {
 			"saveOutput": true,
-			"synapse_widget": {
-				"version": "0.1"
-			},
 			"enableDebugMode": false,
+			"kernelspec": {
+				"name": "synapse_pyspark",
+				"display_name": "Synapse PySpark"
+			},
 			"language_info": {
 				"name": "python"
 			},
@@ -37,18 +41,35 @@
 				"endpoint": "https://ac-test.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/actestspark",
 				"auth": {
 					"type": "AAD",
-					"authResource": "https://dev.azuresynapse.net",
-					"authHeader": null
+					"authResource": "https://dev.azuresynapse.net"
 				},
 				"sparkVersion": "3.4",
 				"nodeCount": 3,
 				"cores": 4,
 				"memory": 28,
-				"extraHeader": null
+				"automaticScaleJobs": false
 			},
 			"sessionKeepAliveTimeout": 30
 		},
 		"cells": [
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"%run sync_utils"
+				],
+				"execution_count": 3
+			},
 			{
 				"cell_type": "code",
 				"metadata": {
